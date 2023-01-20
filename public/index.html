@@ -5,6 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patient Manager</title>
+    <link rel="stylesheet" href="../src/style/style.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="main">
+      <h1>Administrador de Pacientes de Veterinaria</h1>
+      <div class="main-div">
+        <div class="container" id="contenido">
+          <div class="container__formulario">
+            <form action="#" class="formulario" id="nueva-cita">
+              <legend class="formulario-titulo">Datos del Paciente</legend>
+              <div class="grupo-campo">
+                <label class="labels" for="mascota">Nombre Mascota: </label>
+                <div class="grupo-inputs">
+                  <input
+                    type="text"
+                    id="mascota"
+                    name="mascota"
+                    class=""
+                    placeholder="Nombre Mascota"
+                  />
+                </div>
+              </div>
+              <div class="grupo-campo">
+                <label for="propietario" class="labels">Propietario: </label>
+                <div class="grupo-inputs">
+                  <input
+                    type="text"
+                    id="propietario"
+                    name="propietario"
+                    class=""
+                    placeholder="Nombre Dueño de la Mascota"
+                  />
+                </div>
+              </div>
+              <div class="grupo-campo">
+                <label for="telefono" class="labels">Teléfono: </label>
+                <div class="grupo-inputs">
+                  <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    class=""
+                    placeholder="Número de Teléfono"
+                  />
+                </div>
+              </div>
+              <div class="grupo-campo">
+                <label for="fecha" class="labels">Fecha: </label>
+                <div class="grupo-inputs">
+                  <input type="date" id="fecha" name="fecha" />
+                </div>
+              </div>
+              <div class="grupo-campo">
+                <label for="hora" class="labels">Hora: </label>
+                <div class="grupo-inputs">
+                  <input type="time" id="hora" name="hora" />
+                </div>
+              </div>
+              <div class="grupo-campo">
+                <label for="sintomas" class="labels texarea">Sintomas: </label>
+                <div class="grupo-inputs">
+                  <textarea
+                    name="sintomas"
+                    id="sintomas"
+                    class=""
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="grupo-boton">
+                <button type="submit" class="btn__crear">Crear Cita</button>
+              </div>
+            </form>
+          </div>
+          <div class="container__lista-citas">
+            <h2 id="administra">Administra tus Citas</h2>
+            <ul id="citas" class="lista-citas"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../src/index.js"></script>
+  </body>
 </html>

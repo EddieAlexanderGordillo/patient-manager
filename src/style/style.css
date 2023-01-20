@@ -1,0 +1,222 @@
+:root {
+    --almostWhite: #fafafa;
+    --mediumGray: hsl(0, 3%, 64%);
+    --almostBlack: hsl(0, 0%, 8%);
+    --primary: #38b2ac;
+    --primaryHover: #2c7a7b;
+    --backroundBody: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
+    --borderInput: rgb(128, 189, 255);
+    --borderBtn: #23a127;
+    --backgroundBtn: #28B62C;
+    --greenDark: #155724;
+    --greenLight: #d4edda;
+    --blueDark: #5fc1e8;
+    --blueLight: #75CAEB;
+    --yellowDark: #856404;
+    --yellowLight: #fff3cd;
+    --redDark: #ff291d;
+    --redLight: #FF4136;
+    --redBtn: #dc3545;
+}
+
+/* generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100%;
+    background: var(--backroundBody);
+}
+
+.main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.main h1 {
+    font-size: 4.4rem;
+    text-align: center;
+    margin: 40px 0;
+    padding: 5px;
+    color: var(--almostWhite);
+}
+
+.main-div {
+    padding: 30px 10px;
+    background-color: var(--almostWhite);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--almostWhite);
+    padding: 40px;
+}
+
+.container__formulario,
+.container__lista-citas {
+    padding: 10px;
+    margin: 5px;
+}
+
+.formulario-titulo,
+.container__lista-citas h2 {
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.grupo-campo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.labels {
+    width: 40%;
+    font-size: 1.6rem;
+}
+
+.grupo-inputs {
+    width: 100%;
+    margin: 10px 0px 10px 20px;
+}
+
+.grupo-inputs input,
+.grupo-inputs textarea {
+    width: 90%;
+    font-size: 1.4rem;
+    padding: 10px 12px;
+    border: 1px solid var(--mediumGray);
+    border-radius: 5px;
+}
+
+.texarea {
+    margin-top: 15px;
+    align-self: flex-start;
+
+}
+
+.grupo-boton {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn__crear {
+
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--almostWhite);
+    border-top: 1px solid var(--borderBtn);
+    border-right: 2px solid var(--borderBtn);
+    border-bottom: 5px solid var(--borderBtn);
+    border-left: 3px solid var(--borderBtn);
+    border-radius: 5px;
+    background-color: var(--backgroundBtn);
+    cursor: pointer;
+}
+
+/* seccion de administrar citas */
+.card-title {
+    font-size: 2.6rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+
+}
+
+.cita p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.parrafo {
+    font-weight: bold;
+}
+
+.btn {
+
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    font-size: 1.4rem;
+    padding: 5px 12px;
+    margin: 10px 10px 10px 0px;
+    border-radius: 5px;
+}
+
+.btn svg {
+    width: 20px;
+}
+
+.btn--editar {
+    color: var(--almostWhite);
+    border-top: 1px solid var(--blueDark);
+    border-right: 2px solid var(--blueDark);
+    border-bottom: 5px solid var(--blueDark);
+    border-left: 3px solid var(--blueDark);
+    background: var(--blueLight);
+}
+
+/* seccion mensajes de alerta */
+.alerta,
+.alert-error,
+.alerta-exito {
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.alerta-exito {
+    color: var(--almostWhite);
+    border-top: 1px solid var(--borderBtn);
+    border-right: 2px solid var(--borderBtn);
+    border-bottom: 5px solid var(--borderBtn);
+    border-left: 3px solid var(--borderBtn);
+    border-radius: 5px;
+    background-color: var(--backgroundBtn);
+
+}
+
+.alerta-error,
+.btn--eliminar {
+    color: var(--almostWhite);
+    border-top: 1px solid var(--redDark);
+    border-right: 2px solid var(--redDark);
+    border-bottom: 5px solid var(--redDark);
+    border-left: 3px solid var(--redDark);
+    background: var(--redLight);
+}
+
+
+
+@media (min-width: 820px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .container__formulario,
+    .container__lista-citas {
+        width: 50%;
+    }
+}
